@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> - Articles</title>
+    <description>권도영의 깃허브 블로그</description>
+    <link>
+    https://Kkwondoyoung.github.io</link>
+    
+      
+      <item>
+        <title>IoT 시스템을 활용한 센싱 데이터 수집과 시각화</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;특강은 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- 생성 할 때 마다 추가--&gt;
+    &lt;li&gt;&lt;a href=&quot;./lecture-test&quot;&gt;test 용도 - test(1)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Sun, 28 May 2023 08:57:21 +0900</pubDate>
+        <link>
+        https://Kkwondoyoung.github.io/lecture-iotdata</link>
+        <guid isPermaLink="true">https://Kkwondoyoung.github.io/lecture-iotdata</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>좀 돼</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;공모전은 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- 생성 할 때 마다 추가--&gt;
+    &lt;li&gt;&lt;a href=&quot;./contest-test&quot;&gt;test 용도 - test(1)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Sun, 28 May 2023 08:57:21 +0900</pubDate>
+        <link>
+        https://Kkwondoyoung.github.io/contest-test</link>
+        <guid isPermaLink="true">https://Kkwondoyoung.github.io/contest-test</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>좀 돼</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;SQL 공부는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- 생성 할 때 마다 추가--&gt;
+    &lt;li&gt;&lt;a href=&quot;./SQL-test&quot;&gt;test 용도 - test(1)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Sun, 28 May 2023 08:49:21 +0900</pubDate>
+        <link>
+        https://Kkwondoyoung.github.io/sql-test2</link>
+        <guid isPermaLink="true">https://Kkwondoyoung.github.io/sql-test2</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>좀 돼</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- 생성 할 때 마다 추가--&gt;
+    &lt;li&gt;&lt;a href=&quot;./Python-test&quot;&gt;Python 강좌(1) - Python 기본&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Sun, 28 May 2023 08:49:21 +0900</pubDate>
+        <link>
+        https://Kkwondoyoung.github.io/python-test3</link>
+        <guid isPermaLink="true">https://Kkwondoyoung.github.io/python-test3</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>R 테스트</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;R 공부는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- 생성 할 때 마다 추가--&gt;
+    &lt;li&gt;&lt;a href=&quot;./R-test&quot;&gt;test 용도 - test(1)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Sun, 28 May 2023 08:20:21 +0900</pubDate>
+        <link>
+        https://Kkwondoyoung.github.io/r-test</link>
+        <guid isPermaLink="true">https://Kkwondoyoung.github.io/r-test</guid>
+      </item>
+      
+    
+  </channel>
+</rss>

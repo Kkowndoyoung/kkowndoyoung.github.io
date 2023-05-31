@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="https://moon9342.github.io/tag/lecture/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://moon9342.github.io/" rel="alternate" type="text/html" />
+  <updated>2023-05-31T23:40:49+09:00</updated>
+  <id>https://moon9342.github.io/tag/lecture/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">IT Technical Training | </title>
+  
+
+  
+    <subtitle>IT기반기술교육 블로그</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">IoT 시스템을 활용한 센싱 데이터 수집과 시각화</title>
+      <link href="https://moon9342.github.io/lecture-iotdata" rel="alternate" type="text/html" title="IoT 시스템을 활용한 센싱 데이터 수집과 시각화" />
+      <published>2023-05-28T08:57:21+09:00</published>
+      <updated>2023-05-28T08:57:21+09:00</updated>
+      <id>https://moon9342.github.io/lecture-iotdata</id>
+      <content type="html" xml:base="https://moon9342.github.io/lecture-iotdata">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;특강은 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- 생성 할 때 마다 추가--&gt;
+    &lt;li&gt;&lt;a href=&quot;./lecture-test&quot;&gt;test 용도 - test(1)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이 글은 test 용도이다!!&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>doyoungKwon</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="lecture" />
+      
+
+      
+        <summary type="html">특강은 여러 절로 구성되어 있습니다. test 용도 - test(1)</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
