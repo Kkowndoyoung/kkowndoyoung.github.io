@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://kkwondoyoung.github.io/author/do0/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://kkwondoyoung.github.io/" rel="alternate" type="text/html" />
-  <updated>2023-06-01T22:47:30+09:00</updated>
+  <updated>2023-06-02T20:23:42+09:00</updated>
   <id>https://kkwondoyoung.github.io/author/do0/feed.xml</id>
 
   
@@ -32,18 +32,176 @@
 
   
     <entry>
+      <title type="html">IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - 아두이노 데이터 모집(1)</title>
+      <link href="https://kkwondoyoung.github.io/lecture-iotdata1" rel="alternate" type="text/html" title="IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - 아두이노 데이터 모집(1)" />
+      <published>2023-05-28T08:57:21+09:00</published>
+      <updated>2023-05-28T08:57:21+09:00</updated>
+      <id>https://kkwondoyoung.github.io/lecture-iotdata1</id>
+      <content type="html" xml:base="https://kkwondoyoung.github.io/lecture-iotdata1">{% include lecture-table-of-contents.html %}
+
+![IoT](/assets/built/images/LECTURE/IOT_1.jpg){: width=&quot;900px&quot; }
+sw특강 IoT 시스템을 활용한 센싱 데이터 수집과 시각화를 들으러 왔다 
+
+![IoT](/assets/built/images/LECTURE/IOT_2.jpg){: width=&quot;700px&quot; }
+테스트하라고 주신 키트
+
+![IoT](/assets/built/images/LECTURE/IOT_3.jpg){: width=&quot;700px&quot; }
+조립 완료
+
+새로로 꽂혀있는 하늘색이 온도와 습도를 측정하는 곳이다
+
+![IoT](/assets/built/images/LECTURE/IOT_4.PNG)
+사용할 플랫폼들
+
+![IoT](/assets/built/images/LECTURE/IOT_6.PNG)
+코드 작성
+
+2초마다 온도, 습도를 받았다
+
+![IoT](/assets/built/images/LECTURE/IOT_8.png)
+![IoT](/assets/built/images/LECTURE/IOT_9.png)
+코드가 정상적으로 작동해서 2초마다 
+
+![IoT](/assets/built/images/LECTURE/IOT_7.png)
+사용할 포트번호 확인
+
+시각화가 목적인데 온도는 큰 변화를 줄 수 없어 습도만 값을 받게 함
+~~~arduino
+#include &quot;DHT.h&quot;
+
+// DHT 11
+#define DHTPIN 2
+#define DHTTYPE DHT11
+
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+    Serial.begin(9600);
+    Serial.println(F(&quot;Humidity data start!&quot;));
+    dht.begin();
+}
+
+void loop() {
+    // 1/1000sec이니 2000이면 2초
+    delay(2000);
+    float h = dht.readHumidity();
+
+    // check 습도가 제대로 들어왔는지
+    if (isnan(h)) {
+        Serial.println(F(&quot;Failed to read from DHT sensor!&quot;));
+        return;
+    }
+
+
+    Serial.print(F(&quot;Humidity : &quot;));
+    Serial.print(h);
+    Serial.println(&quot;%&quot;);
+}
+
+~~~
+
+![IoT](/assets/built/images/LECTURE/IOT_10.png)
+완성된 코드와 결과
+
+
+이제 Python으로 값을 받아보자
+
+
+![IoT](/assets/built/images/LECTURE/IOT_11.png)
+파이썬 코드
+~~~Python
+import serial
+import time
+import csv
+
+port = 'COM3'
+baud_rate = 9600
+
+# Open the serial port
+ser = serial.Serial(port, baud_rate)
+
+# Read serial data in a loop
+dataes = []
+tempList = []
+
+while True:
+    try:
+        time.sleep(1)
+
+        if ser.readable():
+            # Read a line of serial data
+            line = ser.readline()
+
+            # Decode the line assuming it's UTF-8 encoded
+            line = line.decode('utf-8').strip()
+            ##print(line)
+
+            data = line.split(' ')
+            if data[0] == 'Humidity':
+                print(time.time())
+                # Print the received data
+                print(data[1])
+                print(data[2])
+                tempList.append(int(time.time()))
+                tempList.append(data[2].strip('%'))
+                dataes.append(tempList)
+                tempList = []
+
+                if len(dataes) &gt; 10:
+                    with open(&quot;data.csv&quot;, &quot;w&quot;, newline='') as csvFile:
+                        writer = csv.writer(csvFile)
+                        writer.writerows(dataes)
+
+                    print(&quot;CSV file saved successfully&quot;)
+                    ser.close()
+                    break
+
+    except KeyboardInterrupt:
+        # Close the serial port on Ctrl+C
+        ser.close()
+        break
+~~~
+
+![IoT](/assets/built/images/LECTURE/IOT_12.png)
+결과확인
+
+나머지는 다음 장에~</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>doyoungKwon</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="lecture" />
+      
+
+      
+        <summary type="html">특강은 여러 절로 구성되어 있습니다. IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - (1) IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - (2)</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">좀 돼</title>
       <link href="https://kkwondoyoung.github.io/contest-test" rel="alternate" type="text/html" title="좀 돼" />
       <published>2023-05-28T08:57:21+09:00</published>
       <updated>2023-05-28T08:57:21+09:00</updated>
       <id>https://kkwondoyoung.github.io/contest-test</id>
-      <content type="html" xml:base="https://kkwondoyoung.github.io/contest-test">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;공모전은 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;!-- 생성 할 때 마다 추가--&gt;
-    &lt;li&gt;&lt;a href=&quot;./contest-test&quot;&gt;test 용도 - test(1)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+      <content type="html" xml:base="https://kkwondoyoung.github.io/contest-test">{% include contest-table-of-contents.html %}
 
-&lt;p&gt;이 글은 test 용도이무이다!!&lt;/p&gt;</content>
+이 글은 test 용도이무이다!!</content>
 
       
       
@@ -72,18 +230,128 @@
     </entry>
   
     <entry>
-      <title type="html">IoT 시스템을 활용한 센싱 데이터 수집과 시각화</title>
-      <link href="https://kkwondoyoung.github.io/lecture-iotdata" rel="alternate" type="text/html" title="IoT 시스템을 활용한 센싱 데이터 수집과 시각화" />
+      <title type="html">IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - (2)</title>
+      <link href="https://kkwondoyoung.github.io/lecture-iotdata2" rel="alternate" type="text/html" title="IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - (2)" />
       <published>2023-05-28T08:57:21+09:00</published>
       <updated>2023-05-28T08:57:21+09:00</updated>
-      <id>https://kkwondoyoung.github.io/lecture-iotdata</id>
-      <content type="html" xml:base="https://kkwondoyoung.github.io/lecture-iotdata">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;특강은 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;!-- 생성 할 때 마다 추가--&gt;
-    &lt;li&gt;&lt;a href=&quot;./lecture-test&quot;&gt;test 용도 - test(1)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+      <id>https://kkwondoyoung.github.io/lecture-iotdata2</id>
+      <content type="html" xml:base="https://kkwondoyoung.github.io/lecture-iotdata2">{% include lecture-table-of-contents.html %}
 
-&lt;p&gt;이 글은 test 용도이다!!&lt;/p&gt;</content>
+csv파일로 저장해보자
+
+![IoT](/assets/built/images/LECTURE/IOT_14.png)
+잘 저장 된 모습
+
+가공해서 데이터를 500개 모아봤다
+![IoT](/assets/built/images/LECTURE/IOT_13.png)
+
+코드
+~~~Python
+import serial
+import time
+import csv
+
+port = 'COM3'
+baud_rate = 9600
+
+# Open the serial port
+ser = serial.Serial(port, baud_rate)
+
+# Read serial data in a loop
+dataes = []
+tempList = []
+
+# time ez
+start_time = int(time.time())
+
+while True:
+    try:
+        time.sleep(1)
+
+        if ser.readable():
+            # Read a line of serial data
+            line = ser.readline()
+
+            # Decode the line assuming it's UTF-8 encoded
+            line = line.decode('utf-8').strip()
+            ##print(line)
+
+            data = line.split(' ')
+            if data[0] == 'Humidity':
+                
+                print(int(time.time()-start_time)-2)
+                # Print the received data
+                print(data[1])
+                print(data[2])
+                tempList.append(int(time.time())-start_time-2)
+                tempList.append(data[2].strip('%'))
+                dataes.append(tempList)
+                tempList = []
+
+                if len(dataes) &gt; 500:
+                    with open(&quot;Humidity_data.csv&quot;, &quot;w&quot;, newline='') as csvFile:
+                        writer = csv.writer(csvFile)
+                        writer.writerows(dataes)
+
+                    print(&quot;CSV file saved successfully&quot;)
+                    ser.close()
+                    break
+
+    except KeyboardInterrupt:
+        # Close the serial port on Ctrl+C
+        ser.close()
+        break
+~~~
+
+데이터를 시각화 해봄
+![IoT](/assets/built/images/LECTURE/IOT_15.png)
+
+여러가지 시각화도 연습해봤다
+![IoT](/assets/built/images/LECTURE/IOT_16.png)
+![IoT](/assets/built/images/LECTURE/IOT_17.png)
+
+시각화를 애니메이션으로도 만들어 봤는데 신기해서 올린다
+~~~python
+mport matplotlib.pyplot as plt
+import csv
+import numpy as np
+from matplotlib.animation import FuncAnimation
+
+fig, ax = plt.subplots()
+ax.set_xlim(0,1010)
+ax.set_ylim(0,100)
+plt.xlabel(&quot;Time(s)&quot;)
+plt.ylabel(&quot;Humidity(%)&quot;)
+
+
+x,y = [],[]
+line, = plt.plot([],[],'bo-')
+
+def update(frame):
+    x=X[:frame]
+    y=Y1[:frame]
+    line.set_data(x,y)
+    return line,
+
+X = []
+Y1 = []
+
+with open('Humidity_data.csv', 'r', encoding='utf-8') as f:
+    rdr = csv.reader(f)
+    next(rdr, None)  # Skip the header row
+    for row in rdr:
+        X.append(int(row[0]))
+        Y1.append(float(row[1]))
+
+ani = FuncAnimation(fig,update, frames=len(X),interval=10)
+
+plt.show()
+~~~
+
+결과물은 gif파일이라 pass
+
+
+데이터를 어떻게 수집하는지 궁금했는데 직접 해보아서 좋았다</content>
 
       
       
@@ -104,7 +372,7 @@
       
 
       
-        <summary type="html">특강은 여러 절로 구성되어 있습니다. test 용도 - test(1)</summary>
+        <summary type="html">특강은 여러 절로 구성되어 있습니다. IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - (1) IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - (2)</summary>
       
 
       
@@ -117,13 +385,9 @@
       <published>2023-05-28T08:49:21+09:00</published>
       <updated>2023-05-28T08:49:21+09:00</updated>
       <id>https://kkwondoyoung.github.io/sql-test2</id>
-      <content type="html" xml:base="https://kkwondoyoung.github.io/sql-test2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;SQL 공부는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;!-- 생성 할 때 마다 추가--&gt;
-    &lt;li&gt;&lt;a href=&quot;./SQL-test&quot;&gt;test 용도 - test(1)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+      <content type="html" xml:base="https://kkwondoyoung.github.io/sql-test2">{% include sql-table-of-contents.html %}
 
-&lt;p&gt;이 글은 test 용도이니무이다!!&lt;/p&gt;</content>
+이 글은 test 용도이니무이다!!</content>
 
       
       
@@ -157,19 +421,17 @@
       <published>2023-05-28T08:49:21+09:00</published>
       <updated>2023-05-28T08:49:21+09:00</updated>
       <id>https://kkwondoyoung.github.io/python-test3</id>
-      <content type="html" xml:base="https://kkwondoyoung.github.io/python-test3">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;!-- 생성 할 때 마다 추가--&gt;
-    &lt;li&gt;&lt;a href=&quot;./Python-test&quot;&gt;Python 강좌(1) - Python 기본&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+      <content type="html" xml:base="https://kkwondoyoung.github.io/python-test3">{% include python-table-of-contents.html %}
 
-&lt;p&gt;이 글은 test 용도이니무이다!!&lt;/p&gt;
+이 글은 test 용도이니무이다!!
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;syntaxHighlight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Hello World&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-   &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+~~~javascript
+function syntaxHighlight(code) {
+   var foo = 'Hello World';
+   var bar = 100;
+}
+~~~</content>
 
       
       
@@ -203,13 +465,9 @@
       <published>2023-05-28T08:20:21+09:00</published>
       <updated>2023-05-28T08:20:21+09:00</updated>
       <id>https://kkwondoyoung.github.io/r-test</id>
-      <content type="html" xml:base="https://kkwondoyoung.github.io/r-test">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;R 공부는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;!-- 생성 할 때 마다 추가--&gt;
-    &lt;li&gt;&lt;a href=&quot;./R-test&quot;&gt;test 용도 - test(1)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+      <content type="html" xml:base="https://kkwondoyoung.github.io/r-test">{% include R-table-of-contents.html %}
 
-&lt;p&gt;이 글은 test 용도이다!!&lt;/p&gt;</content>
+이 글은 test 용도이다!!</content>
 
       
       

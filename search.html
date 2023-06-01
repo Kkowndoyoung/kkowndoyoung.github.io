@@ -187,12 +187,21 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
-    "lecture-iotdata": {
-        "title": "IoT 시스템을 활용한 센싱 데이터 수집과 시각화",
+    "lecture-iotdata2": {
+        "title": "IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - (2)",
             "author": "do0",
             "category": "",
-            "content": "특강은 여러 절로 구성되어 있습니다.         test 용도 - test(1)이 글은 test 용도이다!!",
-        "url": "/lecture-iotdata"
+            "content": "특강은 여러 절로 구성되어 있습니다.         IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - (1)    IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - (2)csv파일로 저장해보자잘 저장 된 모습가공해서 데이터를 500개 모아봤다코드import serialimport timeimport csvport = 'COM3'baud_rate = 9600# Open the serial portser = serial.Serial(port, baud_rate)# Read serial data in a loopdataes = []tempList = []# time ezstart_time = int(time.time())while True:    try:        time.sleep(1)        if ser.readable():            # Read a line of serial data            line = ser.readline()            # Decode the line assuming it's UTF-8 encoded            line = line.decode('utf-8').strip()            ##print(line)            data = line.split(' ')            if data[0] == 'Humidity':                                print(int(time.time()-start_time)-2)                # Print the received data                print(data[1])                print(data[2])                tempList.append(int(time.time())-start_time-2)                tempList.append(data[2].strip('%'))                dataes.append(tempList)                tempList = []                if len(dataes) &gt; 500:                    with open(\"Humidity_data.csv\", \"w\", newline='') as csvFile:                        writer = csv.writer(csvFile)                        writer.writerows(dataes)                    print(\"CSV file saved successfully\")                    ser.close()                    break    except KeyboardInterrupt:        # Close the serial port on Ctrl+C        ser.close()        break데이터를 시각화 해봄여러가지 시각화도 연습해봤다시각화를 애니메이션으로도 만들어 봤는데 신기해서 올린다mport matplotlib.pyplot as pltimport csvimport numpy as npfrom matplotlib.animation import FuncAnimationfig, ax = plt.subplots()ax.set_xlim(0,1010)ax.set_ylim(0,100)plt.xlabel(\"Time(s)\")plt.ylabel(\"Humidity(%)\")x,y = [],[]line, = plt.plot([],[],'bo-')def update(frame):    x=X[:frame]    y=Y1[:frame]    line.set_data(x,y)    return line,X = []Y1 = []with open('Humidity_data.csv', 'r', encoding='utf-8') as f:    rdr = csv.reader(f)    next(rdr, None)  # Skip the header row    for row in rdr:        X.append(int(row[0]))        Y1.append(float(row[1]))ani = FuncAnimation(fig,update, frames=len(X),interval=10)plt.show()결과물은 gif파일이라 pass데이터를 어떻게 수집하는지 궁금했는데 직접 해보아서 좋았다",
+        "url": "/lecture-iotdata2"
+    }
+    ,
+    
+    "lecture-iotdata1": {
+        "title": "IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - 아두이노 데이터 모집(1)",
+            "author": "do0",
+            "category": "",
+            "content": "특강은 여러 절로 구성되어 있습니다.         IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - (1)    IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - (2)sw특강 IoT 시스템을 활용한 센싱 데이터 수집과 시각화를 들으러 왔다테스트하라고 주신 키트조립 완료새로로 꽂혀있는 하늘색이 온도와 습도를 측정하는 곳이다사용할 플랫폼들코드 작성2초마다 온도, 습도를 받았다코드가 정상적으로 작동해서 2초마다사용할 포트번호 확인시각화가 목적인데 온도는 큰 변화를 줄 수 없어 습도만 값을 받게 함#include \"DHT.h\"// DHT 11#define DHTPIN 2#define DHTTYPE DHT11DHT dht(DHTPIN, DHTTYPE);void setup() {    Serial.begin(9600);    Serial.println(F(\"Humidity data start!\"));    dht.begin();}void loop() {    // 1/1000sec이니 2000이면 2초    delay(2000);    float h = dht.readHumidity();    // check 습도가 제대로 들어왔는지    if (isnan(h)) {        Serial.println(F(\"Failed to read from DHT sensor!\"));        return;    }    Serial.print(F(\"Humidity : \"));    Serial.print(h);    Serial.println(\"%\");}완성된 코드와 결과이제 Python으로 값을 받아보자파이썬 코드import serialimport timeimport csvport = 'COM3'baud_rate = 9600# Open the serial portser = serial.Serial(port, baud_rate)# Read serial data in a loopdataes = []tempList = []while True:    try:        time.sleep(1)        if ser.readable():            # Read a line of serial data            line = ser.readline()            # Decode the line assuming it's UTF-8 encoded            line = line.decode('utf-8').strip()            ##print(line)            data = line.split(' ')            if data[0] == 'Humidity':                print(time.time())                # Print the received data                print(data[1])                print(data[2])                tempList.append(int(time.time()))                tempList.append(data[2].strip('%'))                dataes.append(tempList)                tempList = []                if len(dataes) &gt; 10:                    with open(\"data.csv\", \"w\", newline='') as csvFile:                        writer = csv.writer(csvFile)                        writer.writerows(dataes)                    print(\"CSV file saved successfully\")                    ser.close()                    break    except KeyboardInterrupt:        # Close the serial port on Ctrl+C        ser.close()        break결과확인나머지는 다음 장에~",
+        "url": "/lecture-iotdata1"
     }
     ,
     
