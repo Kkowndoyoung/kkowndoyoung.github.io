@@ -4,32 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cf1ccb1-076b-4752-a7fe-bb58e8b1bfcc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive.html" beforeDir="false" afterPath="$PROJECT_DIR$/archive.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/author/do0/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/author/do0/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/author/do0/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/author/do0/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/author_archive.html" beforeDir="false" afterPath="$PROJECT_DIR$/author_archive.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contest-test.html" beforeDir="false" afterPath="$PROJECT_DIR$/contest-test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-iotdata.html" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-iotdata.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python-test3.html" beforeDir="false" afterPath="$PROJECT_DIR$/python-test3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/r-test.html" beforeDir="false" afterPath="$PROJECT_DIR$/r-test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql-test2.html" beforeDir="false" afterPath="$PROJECT_DIR$/sql-test2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/contest/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/contest/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/contest/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/contest/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/lecture/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/lecture/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/lecture/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/lecture/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/python/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/python/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/python/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/python/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/r/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/r/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/r/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/r/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/sql/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/sql/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/sql/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/sql/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="9cf1ccb1-076b-4752-a7fe-bb58e8b1bfcc" name="Changes" comment="commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,11 +44,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1685625376566</updated>
-      <workItem from="1685625377747" duration="760000" />
+      <workItem from="1685625377747" duration="1850000" />
     </task>
+    <task id="LOCAL-00001" summary="commit">
+      <created>1685626356019</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685626356019</updated>
+    </task>
+    <task id="LOCAL-00002" summary="commit">
+      <created>1685627233567</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685627233567</updated>
+    </task>
+    <task id="LOCAL-00003" summary="commit">
+      <created>1685627327163</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685627327163</updated>
+    </task>
+    <task id="LOCAL-00004" summary="commit">
+      <created>1685627336245</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685627336245</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
 </project>
