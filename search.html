@@ -11,7 +11,7 @@
 
 
 
-    <title>About</title>
+    <title>Search Result</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -50,31 +50,28 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="권도영의 깃허브 블로그" />
     <link rel="shortcut icon" href="https://Kkwondoyoung.github.io/assets/built/images/favicon.ico" type="image/png" />
-    <link rel="canonical" href="https://Kkwondoyoung.github.io/about/" />
+    <link rel="canonical" href="https://Kkwondoyoung.github.io/search" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="What was doing?" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="About" />
-    <meta property="og:description" content="데이터 분석가를 꿈꾸는 권도영" />
-    <meta property="og:url" content="https://Kkwondoyoung.github.io/about/" />
+    <meta property="og:title" content="Search Result" />
+    <meta property="og:description" content="권도영의 깃허브 블로그" />
+    <meta property="og:url" content="https://Kkwondoyoung.github.io/search" />
     <meta property="og:image" content="https://Kkwondoyoung.github.io/assets/built/images/blog-cover.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
-    <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="" />
-    <meta property="article:modified_time" content="" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="About" />
-    <meta name="twitter:description" content="데이터 분석가를 꿈꾸는 권도영" />
+    <meta name="twitter:title" content="Search Result" />
+    <meta name="twitter:description" content="권도영의 깃허브 블로그" />
     <meta name="twitter:url" content="https://Kkwondoyoung.github.io/" />
     <meta name="twitter:image" content="https://Kkwondoyoung.github.io/assets/built/images/blog-cover.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="What was doing?" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
-    <meta property="og:image:width" content="1400" />
-    <meta property="og:image:height" content="933" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="666" />
 
     <script type="application/ld+json">
 {
@@ -85,7 +82,7 @@
         "name": "What was doing?",
         "logo": "https://Kkwondoyoung.github.io/"
     },
-    "url": "https://Kkwondoyoung.github.io/about/",
+    "url": "https://Kkwondoyoung.github.io/search",
     "image": {
         "@type": "ImageObject",
         "url": "https://Kkwondoyoung.github.io/assets/built/images/blog-cover.png",
@@ -94,9 +91,9 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://Kkwondoyoung.github.io/about/"
+        "@id": "https://Kkwondoyoung.github.io/search"
     },
-    "description": "데이터 분석가를 꿈꾸는 권도영"
+    "description": "권도영의 깃허브 블로그"
 }
     </script>
 
@@ -109,7 +106,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="About" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Search Result" href="/feed.xml" />
 
 
 </head>
@@ -174,14 +171,71 @@ into the {body} of the default.hbs template -->
         <article class="post-full  post page no-image">
 
             <header class="post-full-header">
-                <h1 class="post-full-title">About</h1>
+                <h1 class="post-full-title">Search Result</h1>
             </header>
 
             
 
             <section class="post-full-content">
-                <p>데이터 분석가를 꿈꾸는 권도영</p>
+                <form action="/search" method="get" hidden="hidden">
+    <label for="search-box"></label>
+    <input type="text" id="search-box" name="query">
+</form>
 
+<ul class="mylist" id="search-results"></ul>
+
+<script>
+    window.store = {
+    
+    "lecture-iotdata": {
+        "title": "IoT 시스템을 활용한 센싱 데이터 수집과 시각화",
+            "author": "do0",
+            "category": "",
+            "content": "특강은 여러 절로 구성되어 있습니다.         test 용도 - test(1)이 글은 test 용도이다!!",
+        "url": "/lecture-iotdata"
+    }
+    ,
+    
+    "contest-test": {
+        "title": "좀 돼",
+            "author": "do0",
+            "category": "",
+            "content": "공모전은 여러 절로 구성되어 있습니다.         test 용도 - test(1)이 글은 test 용도이무이다!!",
+        "url": "/contest-test"
+    }
+    ,
+    
+    "sql-test2": {
+        "title": "좀 돼",
+            "author": "do0",
+            "category": "",
+            "content": "SQL 공부는 여러 절로 구성되어 있습니다.         test 용도 - test(1)이 글은 test 용도이니무이다!!",
+        "url": "/sql-test2"
+    }
+    ,
+    
+    "python-test3": {
+        "title": "좀 돼",
+            "author": "do0",
+            "category": "",
+            "content": "Python 강좌는 여러 절로 구성되어 있습니다.         Python 강좌(1) - Python 기본이 글은 test 용도이니무이다!!function syntaxHighlight(code) {   var foo = 'Hello World';   var bar = 100;}",
+        "url": "/python-test3"
+    }
+    ,
+    
+    "r-test": {
+        "title": "R 테스트",
+            "author": "do0",
+            "category": "",
+            "content": "R 공부는 여러 절로 구성되어 있습니다.         test 용도 - test(1)이 글은 test 용도이다!!",
+        "url": "/r-test"
+    }
+    
+    
+    };
+</script>
+<script src="assets/js/lunr.js"></script>
+<script src="assets/js/search.js"></script>
             </section>
 
         </article>

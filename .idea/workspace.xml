@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9cf1ccb1-076b-4752-a7fe-bb58e8b1bfcc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive.html" beforeDir="false" afterPath="$PROJECT_DIR$/archive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author/do0/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/author/do0/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author/do0/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/author/do0/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author_archive.html" beforeDir="false" afterPath="$PROJECT_DIR$/author_archive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contest-test.html" beforeDir="false" afterPath="$PROJECT_DIR$/contest-test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-iotdata.html" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-iotdata.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-test3.html" beforeDir="false" afterPath="$PROJECT_DIR$/python-test3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-test.html" beforeDir="false" afterPath="$PROJECT_DIR$/r-test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql-test2.html" beforeDir="false" afterPath="$PROJECT_DIR$/sql-test2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/contest/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/contest/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/contest/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/contest/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/lecture/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/lecture/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/lecture/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/lecture/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/python/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/python/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/python/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/python/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/r/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/r/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/r/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/r/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/sql/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/sql/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/sql/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/sql/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2QbblEaYwtgtvy7KACjJLvLwNDH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9cf1ccb1-076b-4752-a7fe-bb58e8b1bfcc" name="Changes" comment="" />
+      <created>1685625376566</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685625376566</updated>
+      <workItem from="1685625377747" duration="760000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
