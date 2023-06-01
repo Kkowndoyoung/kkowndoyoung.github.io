@@ -22,6 +22,16 @@
     <!-- custom.css -->
     <link rel="stylesheet" type="text/css" href="/assets/built/custom.css" />
 
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- web font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+
+    <!-- syntax.css 추가-->
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css">
+
     <!-- highlight.js -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
@@ -54,6 +64,12 @@
 
 
 이 글은 test 용도이니무이다!!
+
+function syntaxHighlight(code) {
+   var foo = 'Hello World';
+   var bar = 100;
+}
+
 " />
     <meta property="og:url" content="https://Kkwondoyoung.github.io/python-test3" />
     <meta property="og:image" content="https://Kkwondoyoung.github.io/assets/built/images/python_cover.png" />
@@ -71,6 +87,12 @@
 
 
 이 글은 test 용도이니무이다!!
+
+function syntaxHighlight(code) {
+   var foo = 'Hello World';
+   var bar = 100;
+}
+
 " />
     <meta name="twitter:url" content="https://Kkwondoyoung.github.io/" />
     <meta name="twitter:image" content="https://Kkwondoyoung.github.io/assets/built/images/python_cover.png" />
@@ -110,6 +132,12 @@
 
 
 이 글은 test 용도이니무이다!!
+
+function syntaxHighlight(code) {
+   var foo = 'Hello World';
+   var bar = 100;
+}
+
 "
 }
     </script>
@@ -149,9 +177,9 @@ into the {body} of the default.hbs template -->
             <ul class="nav" role="menu">
     <li class="nav-home" role="menuitem"><a href="/">home</a></li>
     <li class="nav-about" role="menuitem"><a href="/about/">about</a></li>
-    <li class="nav-Python" role="menuitem"><a href="/tag/Python/">Python</a></li>
-    <li class="nav-SQL" role="menuitem"><a href="/tag/SQL/">SQL</a></li>
-    <li class="nav-sR" role="menuitem"><a href="/tag/R/">R</a></li>
+    <li class="nav-python" role="menuitem"><a href="/tag/python/">Python</a></li>
+    <li class="nav-sql" role="menuitem"><a href="/tag/sql/">SQL</a></li>
+    <li class="nav-r" role="menuitem"><a href="/tag/r/">R</a></li>
     <li class="nav-lecture" role="menuitem"><a href="/tag/lecture/">특강</a></li>
     <li class="nav-contest" role="menuitem"><a href="/tag/contest/">공모전</a></li>
 
@@ -171,7 +199,7 @@ into the {body} of the default.hbs template -->
             
         </div>
         
-            <a class="subscribe-button" href="#subscribe">Subscribe</a>
+            <a class="subscribe-button" href="#subscribe">Search</a>
         
     </div>
 </nav>
@@ -219,6 +247,12 @@ into the {body} of the default.hbs template -->
 
 <p>이 글은 test 용도이니무이다!!</p>
 
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">syntaxHighlight</span><span class="p">(</span><span class="nx">code</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Hello World</span><span class="dl">'</span><span class="p">;</span>
+   <span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
                 </div>
             </section>
 
@@ -228,16 +262,25 @@ into the {body} of the default.hbs template -->
                 <section class="subscribe-form">
                     <h3 class="subscribe-form-title">Subscribe to What was doing?</h3>
                     <p>Get the latest posts delivered right to your inbox</p>
-                    <form method="post" action="/subscribe/" class="">
-    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+                    <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
 
     <div class="form-group">
-        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
+        <input class="subscribe-email" onkeyup="myFunc()"
+               id="searchtext" type="text" name="searchtext"
+               placeholder="Search..." />
     </div>
-    <button class="" type="submit" disabled><span>Subscribe</span></button>
-    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
-</form>
-
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
                 </section>
             
         -->
@@ -357,7 +400,7 @@ into the {body} of the default.hbs template -->
                         
                     
 
-                    <h2 class="post-card-title">R 테스트</h2>
+                    <h2 class="post-card-title">r 테스트</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -451,26 +494,36 @@ into the {body} of the default.hbs template -->
 
     </div>
 
-    <!-- The big email subscribe modal content -->
+    <!-- The big email Search modal content -->
     
-        <div id="subscribe" class="subscribe-overlay">
-            <a class="subscribe-overlay-close" href="#"></a>
-            <div class="subscribe-overlay-content">
-                
-                <h1 class="subscribe-overlay-title">Subscribe to What was doing?</h1>
-                <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
-                <form method="post" action="/subscribe/" class="">
-    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+    <div id="subscribe" class="subscribe-overlay">
+        <a class="subscribe-overlay-close" href="#"></a>
+        <div class="subscribe-overlay-content">
+            
+            <h1 class="subscribe-overlay-title">Search What was doing?</h1>
+            <p class="subscribe-overlay-description">
+                lunr.js를 이용한 posts 검색 </p>
+            <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
 
     <div class="form-group">
-        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
+        <input class="subscribe-email" onkeyup="myFunc()"
+               id="searchtext" type="text" name="searchtext"
+               placeholder="Search..." />
     </div>
-    <button class="" type="submit" disabled><span>Subscribe</span></button>
-    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
-</form>
-
-            </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
         </div>
+    </div>
     
 
     <!-- highlight.js -->

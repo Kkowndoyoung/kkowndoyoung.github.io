@@ -11,7 +11,7 @@
 
 
 
-    <title>What was doing?</title>
+    <title>Search Result</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -50,19 +50,19 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="권도영의 깃허브 블로그" />
     <link rel="shortcut icon" href="https://Kkwondoyoung.github.io/assets/built/images/favicon.ico" type="image/png" />
-    <link rel="canonical" href="https://Kkwondoyoung.github.io/" />
+    <link rel="canonical" href="https://Kkwondoyoung.github.io/search" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="What was doing?" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="What was doing?" />
+    <meta property="og:title" content="Search Result" />
     <meta property="og:description" content="권도영의 깃허브 블로그" />
-    <meta property="og:url" content="https://Kkwondoyoung.github.io/" />
+    <meta property="og:url" content="https://Kkwondoyoung.github.io/search" />
     <meta property="og:image" content="https://Kkwondoyoung.github.io/assets/built/images/blog-cover.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="What was doing?" />
+    <meta name="twitter:title" content="Search Result" />
     <meta name="twitter:description" content="권도영의 깃허브 블로그" />
     <meta name="twitter:url" content="https://Kkwondoyoung.github.io/" />
     <meta name="twitter:image" content="https://Kkwondoyoung.github.io/assets/built/images/blog-cover.png" />
@@ -82,7 +82,7 @@
         "name": "What was doing?",
         "logo": "https://Kkwondoyoung.github.io/"
     },
-    "url": "https://Kkwondoyoung.github.io/",
+    "url": "https://Kkwondoyoung.github.io/search",
     "image": {
         "@type": "ImageObject",
         "url": "https://Kkwondoyoung.github.io/assets/built/images/blog-cover.png",
@@ -91,7 +91,7 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://Kkwondoyoung.github.io/"
+        "@id": "https://Kkwondoyoung.github.io/search"
     },
     "description": "권도영의 깃허브 블로그"
 }
@@ -106,11 +106,11 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="What was doing?" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Search Result" href="/feed.xml" />
 
 
 </head>
-<body class="home-template">
+<body class="page-template">
 
     <div class="site-wrapper">
         <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
@@ -119,18 +119,14 @@
 into the {body} of the default.hbs template -->
 
 <!-- The big featured header, it uses blog cover image as a BG if available -->
-<header class="site-header outer " style="background-image:  url(/assets/built/images/blog-cover.png) ">
+<header class="site-header outer">
     <div class="inner">
-        <div class="site-header-content">
-            <h1 class="site-title">
-                
-                    What was doing?
-                
-            </h1>
-            <h2 class="site-description">권도영의 깃허브 블로그</h2>
-        </div>
         <nav class="site-nav">
     <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="https://Kkwondoyoung.github.io/">What was doing?</a>
+            
         
         
             <ul class="nav" role="menu">
@@ -166,241 +162,98 @@ into the {body} of the default.hbs template -->
     </div>
 </header>
 
-<!-- The main content area -->
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <div class="post-feed">
-            <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
+        <article class="post-full  post page no-image">
+
+            <header class="post-full-header">
+                <h1 class="post-full-title">Search Result</h1>
+            </header>
+
             
 
+            <section class="post-full-content">
+                <form action="/search" method="get" hidden="hidden">
+    <label for="search-box"></label>
+    <input type="text" id="search-box" name="query">
+</form>
 
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/lecture-iotdata">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/lecture_cover.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/lecture-iotdata">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Lecture</span>
-                            
-                        
-                    
+<ul class="mylist" id="search-results"></ul>
 
-                    <h2 class="post-card-title">IoT 시스템을 활용한 센싱 데이터 수집과 시각화</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>특강은 여러 절로 구성되어 있습니다. 
-
+<script>
+    window.store = {
     
-    test 용도 - test(1)
-
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/contest-test">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/lecture_cover.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/contest-test">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Contest</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">좀 돼</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>공모전은 여러 절로 구성되어 있습니다. 
-
+    "lecture-iotdata": {
+        "title": "IoT 시스템을 활용한 센싱 데이터 수집과 시각화",
+            "author": "do0",
+            "category": "",
+            "content": "특강은 여러 절로 구성되어 있습니다.         test 용도 - test(1)이 글은 test 용도이다!!",
+        "url": "/lecture-iotdata"
+    }
+    ,
     
-    test 용도 - test(1)
-
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/sql-test2">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/SQL_cover.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/sql-test2">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Sql</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">좀 돼</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>SQL 공부는 여러 절로 구성되어 있습니다. 
-
+    "contest-test": {
+        "title": "좀 돼",
+            "author": "do0",
+            "category": "",
+            "content": "공모전은 여러 절로 구성되어 있습니다.         test 용도 - test(1)이 글은 test 용도이무이다!!",
+        "url": "/contest-test"
+    }
+    ,
     
-    test 용도 - test(1)
-
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/python-test3">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/python_cover.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/python-test3">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Python</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">좀 돼</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Python 강좌는 여러 절로 구성되어 있습니다. 
-
+    "sql-test2": {
+        "title": "좀 돼",
+            "author": "do0",
+            "category": "",
+            "content": "SQL 공부는 여러 절로 구성되어 있습니다.         test 용도 - test(1)이 글은 test 용도이니무이다!!",
+        "url": "/sql-test2"
+    }
+    ,
     
-    Python 강좌(1) - Python 기본
-
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template no-image">
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/r-test">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">R</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">r 테스트</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>R 공부는 여러 절로 구성되어 있습니다. 
-
+    "python-test3": {
+        "title": "좀 돼",
+            "author": "do0",
+            "category": "",
+            "content": "Python 강좌는 여러 절로 구성되어 있습니다.         Python 강좌(1) - Python 기본이 글은 test 용도이니무이다!!function syntaxHighlight(code) {   var foo = 'Hello World';   var bar = 100;}",
+        "url": "/python-test3"
+    }
+    ,
     
-    test 용도 - test(1)
+    "r-test": {
+        "title": "r 테스트",
+            "author": "do0",
+            "category": "",
+            "content": "R 공부는 여러 절로 구성되어 있습니다.         test 용도 - test(1)이 글은 test 용도이다!!",
+        "url": "/r-test"
+    }
+    
+    
+    };
+</script>
+<script src="assets/js/lunr.js"></script>
+<script src="assets/js/search.js"></script>
+            </section>
 
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-
-        </div>
+        </article>
 
     </div>
 </main>
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+<script>
+$(function() {
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+});
+</script>
+
+
 
         <!-- Previous/next page links - displayed on every page -->
         
@@ -476,7 +329,7 @@ into the {body} of the default.hbs template -->
     <!-- Paginator increased to "infinit" in _config.yml -->
     <!-- if paginator.posts  -->
     <!-- <script>
-        var maxPages = parseInt('1');
+        var maxPages = parseInt('');
     </script>
     <script src="/assets/js/infinitescroll.js"></script> -->
     <!-- /endif -->
@@ -499,6 +352,14 @@ into the {body} of the default.hbs template -->
 
 
     <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+$(function() {
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+});
+</script>
+
     
 
     <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
