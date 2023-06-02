@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://kkwondoyoung.github.io/tag/lecture/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://kkwondoyoung.github.io/" rel="alternate" type="text/html" />
-  <updated>2023-06-02T20:23:42+09:00</updated>
-  <id>https://kkwondoyoung.github.io/tag/lecture/feed.xml</id>
+  <link href="https://kkowndoyoung.github.io/tag/lecture/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://kkowndoyoung.github.io/" rel="alternate" type="text/html" />
+  <updated>2023-06-02T22:48:29+09:00</updated>
+  <id>https://kkowndoyoung.github.io/tag/lecture/feed.xml</id>
 
   
   
@@ -32,37 +32,44 @@
 
   
     <entry>
-      <title type="html">IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - 아두이노 데이터 모집(1)</title>
-      <link href="https://kkwondoyoung.github.io/lecture-iotdata1" rel="alternate" type="text/html" title="IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - 아두이노 데이터 모집(1)" />
+      <title type="html">IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - (1) 아두이노 데이터 모집</title>
+      <link href="https://kkowndoyoung.github.io/lecture-iotdata1" rel="alternate" type="text/html" title="IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - (1) 아두이노 데이터 모집" />
       <published>2023-05-28T08:57:21+09:00</published>
       <updated>2023-05-28T08:57:21+09:00</updated>
-      <id>https://kkwondoyoung.github.io/lecture-iotdata1</id>
-      <content type="html" xml:base="https://kkwondoyoung.github.io/lecture-iotdata1">{% include lecture-table-of-contents.html %}
+      <id>https://kkowndoyoung.github.io/lecture-iotdata1</id>
+      <content type="html" xml:base="https://kkowndoyoung.github.io/lecture-iotdata1">{% include lecture-table-of-contents.html %}
 
 ![IoT](/assets/built/images/LECTURE/IOT_1.jpg){: width=&quot;900px&quot; }
+
 sw특강 IoT 시스템을 활용한 센싱 데이터 수집과 시각화를 들으러 왔다 
 
 ![IoT](/assets/built/images/LECTURE/IOT_2.jpg){: width=&quot;700px&quot; }
+
 테스트하라고 주신 키트
 
 ![IoT](/assets/built/images/LECTURE/IOT_3.jpg){: width=&quot;700px&quot; }
+
 조립 완료
 
 새로로 꽂혀있는 하늘색이 온도와 습도를 측정하는 곳이다
 
 ![IoT](/assets/built/images/LECTURE/IOT_4.PNG)
+
 사용할 플랫폼들
 
 ![IoT](/assets/built/images/LECTURE/IOT_6.PNG)
+
 코드 작성
 
 2초마다 온도, 습도를 받았다
 
 ![IoT](/assets/built/images/LECTURE/IOT_8.png)
 ![IoT](/assets/built/images/LECTURE/IOT_9.png)
+
 코드가 정상적으로 작동해서 2초마다 
 
 ![IoT](/assets/built/images/LECTURE/IOT_7.png)
+
 사용할 포트번호 확인
 
 시각화가 목적인데 온도는 큰 변화를 줄 수 없어 습도만 값을 받게 함
@@ -101,6 +108,7 @@ void loop() {
 ~~~
 
 ![IoT](/assets/built/images/LECTURE/IOT_10.png)
+
 완성된 코드와 결과
 
 
@@ -108,6 +116,7 @@ void loop() {
 
 
 ![IoT](/assets/built/images/LECTURE/IOT_11.png)
+
 파이썬 코드
 ~~~Python
 import serial
@@ -163,6 +172,7 @@ while True:
 ~~~
 
 ![IoT](/assets/built/images/LECTURE/IOT_12.png)
+
 결과확인
 
 나머지는 다음 장에~</content>
@@ -194,12 +204,12 @@ while True:
     </entry>
   
     <entry>
-      <title type="html">IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - (2)</title>
-      <link href="https://kkwondoyoung.github.io/lecture-iotdata2" rel="alternate" type="text/html" title="IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - (2)" />
+      <title type="html">IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - (2) 시각화</title>
+      <link href="https://kkowndoyoung.github.io/lecture-iotdata2" rel="alternate" type="text/html" title="IoT 시스템을 활용한 센싱 데이터 수집과 시각화 - (2) 시각화" />
       <published>2023-05-28T08:57:21+09:00</published>
       <updated>2023-05-28T08:57:21+09:00</updated>
-      <id>https://kkwondoyoung.github.io/lecture-iotdata2</id>
-      <content type="html" xml:base="https://kkwondoyoung.github.io/lecture-iotdata2">{% include lecture-table-of-contents.html %}
+      <id>https://kkowndoyoung.github.io/lecture-iotdata2</id>
+      <content type="html" xml:base="https://kkowndoyoung.github.io/lecture-iotdata2">{% include lecture-table-of-contents.html %}
 
 csv파일로 저장해보자
 
@@ -212,7 +222,7 @@ csv파일로 저장해보자
 코드
 ~~~Python
 import serial
-import time
+import time 
 import csv
 
 port = 'COM3'
