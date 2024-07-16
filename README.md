@@ -93,11 +93,6 @@ please log them on the [issue tracker](https://github.com/jekyllt/jasper2/issues
 
 Feel free pull-request your patches and fixes.
 
-## Thanks
-
-Many thanks to the Ghost team for all the design work. Also many thanks to all contributors,
-that help keeping the project alive and updated :smile:
-
 
 ## Copyright & License
 
